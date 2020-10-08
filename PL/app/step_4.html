@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Step 4</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <main class="main-contact bg-5 step-4 container">
+      <div class="grid-position">
+        <div class="grid-position--top">
+          <div class="logo">
+            <img src="img/jadore-logo.png" alt="" />
+          </div>
+
+          <div class="step-block">
+            <div class="step">2</div>
+
+            <p class="text padding-center">
+              {{EN: WHEN IS GRASSE TUBEROSE HARVESTED?||PL: KIEDY TUBEROZA Z GRASSE JEST ZBIERANA?}}
+            </p>
+          </div>
+
+          <form action="step_5.html" method="get">
+            <input
+              type="hidden"
+              name="question"
+              value="WHEN IS GRASSE TUBEROSE HARVESTED?"
+            />
+
+            <div class="btns full column">
+              <label class="btn small-text">
+                <input type="submit" name="answer" value="AT TWILIGHT" hidden />
+
+                {{EN: AT TWILIGHT||PL: PO ZMIERZCHU}}
+              </label>
+
+              <label class="btn small-text">
+                <input type="submit" name="answer" value="IN THE MIDDLE OF THE DAY WHEN THE SUN IS AT ITS HIGHEST POINT" hidden />
+
+                {{EN: IN THE MIDDLE OF THE DAY WHEN THE SUN IS AT ITS HIGHEST POINT||PL: W ŚRODKU DNIA, GDY SŁOŃCE ZNAJDUJE SIĘ W NAJWYŻSZYM PUNKCIE}}
+              </label>
+
+              <label class="btn small-text">
+                <input type="submit" name="answer" value="ONCE THE SUN SETS" hidden />
+
+                {{EN: ONCE THE SUN SETS||PL: GDY TYLKO ZAJDZIE SŁOŃCE}}
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="js/keyboard/jquery.keyboard.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

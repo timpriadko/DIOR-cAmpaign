@@ -1,0 +1,67 @@
+// form-input
+
+.form-group {
+    position:relative;
+    max-width: 270px;
+    width: 45%;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    .input-label {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        // color: @green;
+        cursor: pointer;
+        svg {
+            margin-right: 10px;
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: #ff5e00;
+                    transition: .2s;
+                }
+            }
+            span {
+                color: #ff5e00;
+                transition: .2s;
+            }
+        }
+    }
+    &:last-child {
+        width: 100%;
+        max-width: unset;
+    }
+}
+.form-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background-color: transparent;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+    color: #CCCCCC;
+    cursor: inherit;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: #777777;
+}
+.focused .form-label {
+    transform: translateY(-125%);
+    font-size: .75em;
+}
+.form-input {
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 1px 0 0 #e5e5e5;
+    transition: box-shadow 150ms ease-out;
+    background-color: transparent;
+    border-radius: 0;
+    color: #fff;
+}
+.form-input:focus {
+    box-shadow: 0 2px 0 0 #CCCCCC;
+}
