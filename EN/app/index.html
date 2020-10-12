@@ -16,9 +16,12 @@
     </div>
 
     <div class="top-image">
-      <img
-        src="./img/all_175_224_E-RETAIL_A20S458_CAPTURE TOTALE S2 20 EUROPE_POSChart_Instit Duo_Franch_Dior_Claim EN_CTA_v2_0.01.png"
-        alt="">
+      <a href="https://www.kicks.se/dior/hudvard/extrem-global-anti-aging/capture-totale-day-creme-50-ml?utm_medium=website&utm_source=banner&utm_campaign=leverantor_se&utm_term=2041_dio_sampling"
+        target="_blank">
+        <img
+          src="./img/all_175_224_E-RETAIL_A20S458_CAPTURE TOTALE S2 20 EUROPE_POSChart_Instit Duo_Franch_Dior_Claim EN_CTA_v2_0.01.png"
+          alt="">
+      </a>
     </div>
 
     <div class="text">
@@ -30,26 +33,77 @@
         sample.</p>
     </div>
 
-    <form action="" class="form">
-      <div class="form-group">
-        <input class="form-input" type="text">
-        <label class="form-label" for="subscribe">Full name</label>
-      </div>
-    </form>
-
     <form action="step_2.html" method="get" class="container">
       <div class="form-row two-column">
-        <input type="text" name="name" placeholder="First name" />
-        <input type="text" name="last-name" placeholder="Last name" />
+        <div class="form-group">
+          <input class="form-input" name="first-name" type="text">
+          <label class="form-label" for="subscribe">First name</label>
+        </div>
+        <div class="form-group">
+          <input class="form-input" name="second-name" type="text">
+          <label class="form-label" for="subscribe">Second name</label>
+        </div>
       </div>
-      <div class="form-row">
-        <input type="email" id="email" name="email" class="email-input" placeholder="{{EN: Email address}}" />
+
+      <div class="form-row two-column">
+        <div class="custom-select">
+          <select name="gender" id="">
+            <option value="">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+          <input id="birth_date" class="date" name="last-name" type="date" data-date="Invalid date"
+            data-date-format="DD MMM YYYY">
+        </div>
+      </div>
+
+      <div class="form-row fullwidth">
+        <div class="form-group">
+          <input class="form-input" name="Address" type="text">
+          <label class="form-label" for="subscribe">Address</label>
+        </div>
+      </div>
+
+      <div class="form-row two-column">
+        <div class="">
+          <input class="form-input" name="Address-2" type="text">
+        </div>
+        <div class="form-group">
+          <input class="form-input" name="Post-code" type="text">
+          <label class="form-label" for="subscribe">Post code</label>
+        </div>
+      </div>
+
+      <div class="form-row fullwidth">
+        <div class="custom-select">
+          <select name="country">
+            <option value="">Country</option>
+            <option value=""></option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row fullwidth">
+        <div class="form-group">
+          <input class="form-input" name="Email" type="Email">
+          <label class="form-label" for="subscribe">Email address</label>
+        </div>
+      </div>
+
+      <div class="form-row fullwidth">
+        <div class="form-group">
+          <input class="form-input" name="confirm-email" type="Email">
+          <label class="form-label" for="subscribe">Confirm email</label>
+        </div>
       </div>
 
       <div class="btns full">
         <label class="btn small-text disabled" id="termsSubmitLabel">
           <input type="submit" id="termsSubmit" disabled />
-          {{EN: Collect your sample||PL: OTRZYMAJ PRÓBKĘ}}
+          {{EN: Continue}}
         </label>
       </div>
     </form>

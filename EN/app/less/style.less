@@ -232,6 +232,10 @@ h1 {
   & + .text {
     margin-top: 10px;
   }
+  a {
+    text-decoration: none;
+    border: none;
+  }
 }
 
 .step-block {
@@ -506,6 +510,7 @@ input {
 .form-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   max-width: 738px;
   width: 100%;
   margin: 40px auto;
@@ -959,7 +964,20 @@ input {
   .form-row {
     padding: 0 1.2vh;
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 0;
+    
+    &.two-column {
+      & > * {
+        width: 45%;
+      }
+    }
+
+    &.fullwidth {
+      & > * {
+        width: 100%;
+        max-width: unset;
+      }
+    }
 
     .form-col-1-3 {
       width: initial;
@@ -972,6 +990,61 @@ input {
       padding: 0;
     }
   }
+  
+  // date
+  .date {
+    position: relative;
+    height: 43px;
+    color: transparent;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 23px;
+      content: attr(data-date);
+      display: inline-block;
+      color: #262626;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 13px;
+      left: 7px;
+      width: 10px;
+      height: 11px;
+      background: url(../img/arrow.svg);
+      background-position: 0;
+      background-size: 10px 10px;
+      background-repeat: no-repeat;
+    }
+
+    &.change:before {
+      content: attr(data-content) 'Date of birth';
+    }
+  
+    &::-webkit-datetime-edit,
+    &::-webkit-inner-spin-button,
+    &::-webkit-clear-button {
+      display: none;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      background-position: right;
+      bottom: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      left: -20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+    }
+  }
+
   .wrap-checkbox {
     padding: 0 1.2vh;
 
@@ -989,11 +1062,14 @@ input {
       }
     }
   }
+  input[type="date"] {
+    padding-left: 23px;
+  }
   input:not([type='submit']) {
-    font-size: 13px;
+    font-size: 12px;
     height: 5vh;
     min-height: 38px;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid #8D8D8D;
 
     &.email-input {
       margin-top: 1vh;
@@ -1063,3 +1139,4 @@ input {
 }
 
 @import url(./form-input.less);
+@import url(./custom-select.less);
